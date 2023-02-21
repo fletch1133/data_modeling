@@ -1,0 +1,77 @@
+users can sign in using their email
+
+users can sign in their phone number
+
+users can customize passwords
+
+users can create a profile picture
+
+users can follow friends
+
+users can block other users
+
+users can join groups
+
+users can like posts
+
+users can repost posts
+
+users can upload photos with text
+
+users can upload videos with text
+
+Brainstorming
+
+username
+email
+password
+profile pic
+bio
+
+followers/following
+
+post text
+tags
+user posted
+photos
+
+comments
+user commented
+
+group
+group members
+group posts
+
+tables
+
+users: store all user information
+
+posts: store all posts and related info
+
+postsTags: keepa track of tags for each post
+
+tags: keeps track of the different types of tags for posts
+
+liked: user => post
+
+follow: relationships between followed users
+
+photos: link/img and post it relates to
+
+comments: holds comments and related info (user/post)
+
+groups: group id and name
+groupMembers: names of members for each group
+
+one-to-one: 
+        posts <=> photos
+
+one-to-many: 
+        users => following/followers 
+        users => posts
+        users => comments
+        
+
+many-to-many: 
+        post <=> postTags
+        users <=> groupsMembers

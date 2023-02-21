@@ -1,0 +1,132 @@
+recipes
+ingridents
+instructions
+public/private
+usersRecipes 
+grocery list
+user occasions
+recipe occasions
+
+user: sign in and create recipes 
+
+user: add to create
+
+user: make recipes public or private
+
+grocery: ingridents in the groceries 
+
+grocery: instruction on meal preparation
+
+occasions: when to cook what meals
+
+---Table Ideas---
+User Table - This table will store information about the individual who is using the application
+
+Ingrident Table - This table will store data contains what is used to prepare certain foods
+
+Recipe Table - This table will store information about what is needed and how to cook certain meals
+
+Occasion Table - This table will contain information on what should be cooked based off what ocassion is being celebrated
+
+Instruction Table - This table will give you a step by step guide on how to prepare a meal
+
+Grocery Table - Thus table will contain a list of ingridents a person would buy
+
+Public Table - This table will contain the recipes and ingridents of all meals that are public
+
+Private Table - This table will contain the recipes and ingridents of all meals that are private
+
+---Relationships---
+
+one-to-one:
+
+
+
+one-to-many:
+user => ingridents - one user has access to multiple different ingridents
+users => recipes - one ussr has access to multiple different recipes
+
+
+
+many-to-many:
+recipe => ingridents
+
+
+
+---Columns---
+
+user_id - purpose is to manage for the website creator to collect more data  
+username - to record a persons account and let them remember it  
+email  - send them memos and updtes and also used to link the persons accounts
+password - to secure the users account from hackers and things of that nature
+
+
+user_id - to collect data on which types of recipes the user is interested in
+recipe_id - each recipe will be given its own id and stored with that id and called by this id
+text - fill in any information to filter what kind of recipoe the user is looking for  
+instructions - to follow what is needed to complete the recipe correctly	  
+public - determine that the recipe is able to be seen by any user	  
+occasion - when the recipe should be used for
+
+
+ingredient_id - to show which ingredients are avaiable  
+item - to label and sort through any ingredient in the recipe
+
+
+grocery_id - what is needed from the list of groceries 
+ingredient - the ingredients needed to satisfy the list of groceries
+user_id - the specific user that is shopping for stated groceries
+
+
+rec_ing_id - combination of all ingredients and recipes avaiable
+recipe_id - what are the steps for every avaiable recipe
+ingredient_id - all avaiable products needed to complete the recipes
+
+
+occasion_id - all occasions avaiable for meals  
+type - specific occasions that meals are available for
+
+
+
+
+
+
+
+--CREATE TABLE users (
+-- user_id SERIAL PRIMARY KEY,
+--  username varchar(255),
+--  email varchar(255),
+--  password varchar(255)
+--);
+
+--CREATE TABLE occasions(
+--occasions_id SERIAL PRIMARY KEY,
+--  type varchar(255)
+--);
+
+--CREATE TABLE recipe (
+--	recipe_id SERIAL PRIMARY KEY,
+--  user_id int NOT NULL REFERENCES users(user_id),
+--  content varchar(255),
+--  instructions varchar(255),
+--  public boolean
+--);
+
+--CREATE TABLE ingredient(
+--ingredient_id SERIAL PRIMARY KEY,
+--  item varchar(255)
+--);
+
+--CREATE TABLE recipe_ingredients (
+--rec_ing_id SERIAL PRIMARY KEY,
+--  recipe_id int NOT NULL REFERENCE recipe(recipe_id),
+--  ingredient_id int NOT NULL REFERENCE ingredient(user_id),
+--);
+
+--CREATE TABLE groceries (
+--groceries_id SERIAL PRIMARY KEY,
+--  user_id int NOT NULL REFERENCE users(user_id),
+--  ingredient_id int NOT NULL REFERENCE ingredient(ingredient_id)
+--);
+
+
